@@ -21,8 +21,8 @@ function getComputerChoice() {
 //    You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. 
 //    For now, just assume the user will always enter a valid choice.
 let getHumanChoice = function () {
-    choice = prompt("Human, what is your choice?")
-    return choice
+    choice = prompt("Human, what is your choice?");
+    return choice;
 }
 
 // console.log(getHumanChoice());

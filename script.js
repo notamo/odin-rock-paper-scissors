@@ -55,8 +55,8 @@ let playRound = (humanChoice, computerChoice) => {
     computerChoice = computerChoice.toLowerCase();
 
     if (humanChoice === computerChoice) {
-        console.log("It's a draw! No points were gained")
-        return
+        console.log("It's a draw! No points were gained.");
+        return;
     }
 
     if (humanChoice === "paper") {
@@ -65,7 +65,7 @@ let playRound = (humanChoice, computerChoice) => {
         } else {
             computerWins("scissors", "paper");
         }
-        return
+        return;
     }
 
     if (humanChoice === "rock") {
@@ -74,7 +74,7 @@ let playRound = (humanChoice, computerChoice) => {
         } else {
             computerWins("paper", "rock");
         }
-        return
+        return;
     }
     
     if (humanChoice === "scissors") {
@@ -83,11 +83,11 @@ let playRound = (humanChoice, computerChoice) => {
         } else {
             computerWins("rock", "scissors");
         }
-        return
+        return;
     }
     
-    console.log("Invalid human choice! Round cancelled")
-    return
+    console.log("Invalid human choice! Round cancelled");
+    return;
 }
 
 humanSelection = getHumanChoice();

@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    choice = Math.floor(Math.random() * 3);
+    const choice = Math.floor(Math.random() * 3);
 
     if (choice === 0) {
         return "rock";
@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 let getHumanChoice = function () {
-    choice = prompt("Human, what is your choice?");
+    const choice = prompt("Human, what is your choice?");
     return choice;
 }
 
@@ -77,8 +77,8 @@ let playGame = () => {
 
     let ctr = 0;
     while (ctr < 5) {
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();    
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();    
         playRound(humanSelection, computerSelection);
         ctr++;
     }

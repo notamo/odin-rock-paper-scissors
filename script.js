@@ -1,3 +1,4 @@
+// Write a logic to get a computer choice
 // 1. Create a new function named getComputerChoice.
 // 2. Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
 function getComputerChoice() {
@@ -13,3 +14,9 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+// Write a logic to get the human choice
+// 1. Create a new function named getHumanChoice.
+let getHumanChoice = function () {
+
+}

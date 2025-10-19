@@ -13,10 +13,13 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 // Write a logic to get the human choice
 // 1. Create a new function named getHumanChoice.
 let getHumanChoice = function () {
-
+    choice = prompt("Human, what is your choice?")
+    return choice
 }
+
+// console.log(getHumanChoice());

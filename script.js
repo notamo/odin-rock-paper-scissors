@@ -17,6 +17,9 @@ function getComputerChoice() {
 
 // Write a logic to get the human choice
 // 1. Create a new function named getHumanChoice.
+// 2. Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
+//    You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. 
+//    For now, just assume the user will always enter a valid choice.
 let getHumanChoice = function () {
     choice = prompt("Human, what is your choice?")
     return choice

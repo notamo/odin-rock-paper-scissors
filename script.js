@@ -29,5 +29,6 @@ let getHumanChoice = function () {
 
 // Declare the players score variables
 // 1. Create two new variables named humanScore and computerScore in the global scope.
-let humanScore;
-let computerScore;
+// 2. Initialize those variables with the value of 0.
+let humanScore = 0;
+let computerScore = 0;

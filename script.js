@@ -26,3 +26,8 @@ let getHumanChoice = function () {
 }
 
 // console.log(getHumanChoice());
+
+// Declare the players score variables
+// 1. Create two new variables named humanScore and computerScore in the global scope.
+let humanScore;
+let computerScore;

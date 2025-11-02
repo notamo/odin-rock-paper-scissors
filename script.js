@@ -29,11 +29,17 @@ let initScoreUi = () => {
     scorePara.id = "score";
     scorePara.textContent = `Computer score: 0, Human score: 0`;
     result.append(scorePara);
-}
+}   
 
 let updateScoreUi = (computerScore = 0, humanScore = 0) => {
     const scorePara = document.querySelector("#score");
     scorePara.textContent = `Computer score: ${computerScore}, Human score: ${humanScore}`
+}
+
+let resetUi = () => {
+    const result = document.querySelector("#result");
+    result.textContent = "";
+    initScoreUi();
 }
 
 function playGame() {
@@ -109,14 +115,17 @@ function playGame() {
         playRound(humanChoice, getComputerChoice());
         updateScoreUi(computerScore, humanScore);
 
-        if (humanScore >= 5) {
-            console.log("You win!");
-            return;
-        }
+        if (humanScore >= 5 || computerScore >= 5) {
 
-        if (computerScore >= 5) {
-            console.log("Computer wins!");
-            return;
+            if (humanScore > computerScore) {
+                console.log("You win!");
+            } else {
+                console.log("You lose!");
+            }
+
+            humanScore = 0;
+            computerScore = 0;
+            resetUi();
         }
 
     });

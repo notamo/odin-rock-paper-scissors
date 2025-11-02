@@ -116,11 +116,11 @@ function playGame() {
         updateScoreUi(computerScore, humanScore);
 
         if (humanScore >= 5 || computerScore >= 5) {
-
+            
             if (humanScore > computerScore) {
-                console.log("You win!");
+                alert("You win!");
             } else {
-                console.log("You lose!");
+                alert("You lose!");
             }
 
             humanScore = 0;

@@ -100,18 +100,6 @@ function playGame() {
     select.addEventListener("click", (event) => {
         const humanChoice = event.target.id;
 
-        switch (humanChoice) {
-            case "rock":
-                addLogEntry("user selected rock");
-                break;
-            case "paper":
-                addLogEntry("user selected paper");
-                break;
-            case "scissors":
-                addLogEntry("user selected scissors");
-                break;
-        }
-        
         playRound(humanChoice, getComputerChoice());
         updateScoreUi(computerScore, humanScore);
 

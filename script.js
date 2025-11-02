@@ -75,21 +75,44 @@ let playGame = () => {
         return;
     }
 
-    let ctr = 0;
-    while (ctr < 5) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();    
-        playRound(humanSelection, computerSelection);
-        ctr++;
-    }
+    // let ctr = 0;
+    // while (ctr < 5) {
+    //     const humanSelection = getHumanChoice();
+    //     const computerSelection = getComputerChoice();    
+    //     playRound(humanSelection, computerSelection);
+    //     ctr++;
+    // }
 
-    if (humanScore > computerScore) {
-        console.log("You win!");
-    } else if (humanScore < computerScore) {
-        console.log("Computer wins!");
-    } else {
-        console.log("It's a draw!");
-    }
+    // if (humanScore > computerScore) {
+    //     console.log("You win!");
+    // } else if (humanScore < computerScore) {
+    //     console.log("Computer wins!");
+    // } else {
+    //     console.log("It's a draw!");
+    // }
 }
 
+function init() {
+    const select = document.querySelector("#selection");
+
+    select.addEventListener("click", (event) => {
+        let target = event.target;
+
+        switch (target.id) {
+            case "rock":
+                console.log("user selected rock");
+                break;
+            case "paper":
+                console.log("user selected paper");
+                break;
+            case "scissors":
+                console.log("user selected scissors");
+                break;
+        }
+        
+        
+    });
+}
+
+init();
 playGame();

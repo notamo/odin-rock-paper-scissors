@@ -23,6 +23,14 @@ let addLogEntry = (text) => {
     result.appendChild(logEntry);
 }
 
+let initScoreUi = () => {
+    const result = document.querySelector("#result");
+    const scorePara = document.createElement("p");
+    scorePara.id = "score";
+    scorePara.textContent = `Computer score: 0, Human score: 0`;
+    result.append(scorePara);
+}
+
 let updateScoreUi = (computerScore = 0, humanScore = 0) => {
     const scorePara = document.querySelector("#score");
     scorePara.textContent = `Computer score: ${computerScore}, Human score: ${humanScore}`
@@ -31,12 +39,7 @@ let updateScoreUi = (computerScore = 0, humanScore = 0) => {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-
-    const result = document.querySelector("#result");
-    const scorePara = document.createElement("p");
-    scorePara.id = "score";
-    scorePara.textContent = `Computer score: ${computerScore}, Human score: ${humanScore}`;
-    result.append(scorePara);
+    initScoreUi();
     
     let humanWins    = (winningPick, losingPick) => {
         addLogEntry(`You win! ${winningPick} beats ${losingPick}`);
